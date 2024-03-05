@@ -6,6 +6,19 @@ import (
 	"os"
 )
 
+var (
+	SigningMethodES256 = jwt.SigningMethodES256
+	SigningMethodES384 = jwt.SigningMethodES384
+	SigningMethodES512 = jwt.SigningMethodES512
+	SigningMethodEdDSA = jwt.SigningMethodEdDSA
+	SigningMethodHS256 = jwt.SigningMethodHS256
+	SigningMethodHS384 = jwt.SigningMethodHS384
+	SigningMethodHS512 = jwt.SigningMethodHS512
+	SigningMethodRS256 = jwt.SigningMethodRS256
+	SigningMethodRS384 = jwt.SigningMethodRS384
+	SigningMethodRS512 = jwt.SigningMethodRS512
+)
+
 type TokenManager struct {
 	method     jwt.SigningMethod
 	publicKey  interface{}
