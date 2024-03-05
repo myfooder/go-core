@@ -114,12 +114,12 @@ func parseKeys(cfg *Config) (publicKey []byte, privateKey []byte) {
 
 }
 
-func (m *TokenManager) SignedToken(claims Claims) (string, error) {
+func (m *TokenManager) SignedToken(claims *Claims) (string, error) {
 	token := m.NewToken(claims)
 	return m.SignedString(token)
 }
 
-func (m *TokenManager) NewToken(claims Claims) *jwt.Token {
+func (m *TokenManager) NewToken(claims *Claims) *jwt.Token {
 	return jwt.NewWithClaims(m.method, claims)
 }
 
